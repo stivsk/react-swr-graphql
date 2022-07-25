@@ -8,7 +8,7 @@ export const useAllPersons = () => {
   return { allPersons: data.allPersons, error }
 }
 
-export const useLazyAllPersons = () => {
+export const useAllPersonsLazy = () => {
   const [getAllPersonsLazy, response] = useLazySWR(ALL_PERSONS_QUERY)
 
   return { getAllPersonsLazy, allPersonsLazy: response?.allPersons }

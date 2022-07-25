@@ -9,7 +9,7 @@ export const useAllPersons = () => {
 }
 
 export const useLazyAllPersons = () => {
-  const [executeAllPersons, response] = useLazySWR(ALL_PERSONS_QUERY)
+  const [getAllPersonsLazy, response] = useLazySWR(ALL_PERSONS_QUERY)
 
-  return { executeAllPersons, response }
+  return { getAllPersonsLazy, allPersonsLazy: response?.allPersons }
 }

@@ -39,10 +39,10 @@ const AllPersons = () => {
         {allPersons.map(person => <li key={person.id}>{person.name} from {person.address.city}</li>)}
       </ol>
       <form onSubmit={handleAddPersonSubmit}>
-        <input name='name' placeholder='name' type="text" />
-        <input name='phone' placeholder='phone' type="text" />
-        <input name='street' placeholder='street' type="text" />
-        <input name='city' placeholder='city' type="text" />
+        <input name='name' required placeholder='name' type="text" />
+        <input name='phone' required placeholder='phone' type="text" />
+        <input name='street' required placeholder='street' type="text" />
+        <input name='city' required placeholder='city' type="text" />
         <button type='submit'>
           Add New Person
         </button>
